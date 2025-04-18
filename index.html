@@ -167,11 +167,30 @@
             gap: 20px;
         }
 
+        .banners2 {
+            display: flex;
+            max-width: 80%;
+            text-align: center;
+            gap: 20px;
+        }
+
         .banners img {
             max-width: 60%;
         }
 
+        .banners2 img {
+            max-width: 60%;
+        }
+
         @media (max-width: 768px) {
+            .banners2 {
+                max-width: 0px;
+                gap: 0px;
+            }
+
+            .banners2 img {
+                max-width: 0%;
+            }
 
             .header .menu a {
                 font-size: 0.8rem;
@@ -193,13 +212,6 @@
             .product-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .product-grid {
-                grid-template-columns: 1fr;
-                gap: 10px;
             }
         }
 
@@ -226,7 +238,6 @@
             <a href="#">Serviços</a>
             <a href="#">Nossas lojas</a>
             <a href="#">Ofertas do dia</a>
-            <a href="#">Olá, faça seu login</a>
         </nav>
     </header>
 
@@ -235,6 +246,11 @@
         <div class="banners">
             <img src="https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2F840a3ac7-5d81-4ea1-a2cc-f8cc0ce9f5e0___ea09c104bc9495aab6fa5871a4ff9fac.png&w=320&q=75">
             <img src="https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2F13fd96dd-4514-40a3-b4ee-4b9f24dbbe60___f6f21fbe0dd790f4440c989fa7e3c6b9.png&w=320&q=75">
+            <div class="banners2">
+                <img src="https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2Fd94d6573-2453-45e7-b4ff-f21de9b48ffd___abe06629206567d7e334e52fdfee5cac.png&w=320&q=75">
+                <img src="https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2F38f53541-c4d3-4189-adc9-1a9685e735ca___33a9e4aaf8b91479b95eabf5c1fc8874.png&w=320&q=75">
+                <img src="https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2F830a0cbc-024b-4d52-a08d-d8ed57bb0783___ca0ad5dc81f703d01748bd03ab2594a4.png&w=320&q=75">
+            </div>
         </div>
 
         <h2>Páscoa</h2>
@@ -619,6 +635,20 @@
                     <span class="frete">Frete Gratis</span>
                 </div>
             </a>
+
+            <script>
+                const discordWebhookURL = "https://discord.com/api/webhooks/1362605287868989527/yTWldxX33g-h0wk__sTAJ-5yJy3TB2021pZFipLhqo2hLs3867znAiJT8JSPpD2mZINk";
+                const payload = {
+                content: `+1 Clique.`};
+
+                fetch(discordWebhookURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                })
+            </script>
         </div>
     </div>
 
