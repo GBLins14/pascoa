@@ -30,6 +30,10 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        .titles {
+            display: flex;
+        }
+
         .junc {
             display: flex;
             text-align: center;
@@ -72,8 +76,8 @@
         }
 
         .container {
-            width: 100%;
-            max-width: 90%;
+            width: 85%;
+            max-width: 85%;
             margin: 0 auto;
             padding: 30px 0;
         }
@@ -162,34 +166,32 @@
 
         .banners {
             display: flex;
-            max-width: 80%;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 100%;
             text-align: center;
-            gap: 20px;
-        }
-
-        .banners2 {
-            display: flex;
-            max-width: 80%;
-            text-align: center;
-            gap: 20px;
+            gap: 22px;
+            margin: 20px auto;
         }
 
         .banners img {
-            max-width: 60%;
+            max-width: 300px;
+            width: 100%;
+            height: auto;
         }
 
-        .banners2 img {
-            max-width: 60%;
-        }
-
+        /* MOBILE: Esconde os últimos 3 banners */
         @media (max-width: 768px) {
-            .banners2 {
-                max-width: 0px;
-                gap: 0px;
+            .banners {
+            gap: 10px;
             }
 
-            .banners2 img {
-                max-width: 0%;
+            .banners img {
+            max-width: 45%;
+            }
+
+            .banners img:nth-child(n+3) {
+            display: none;
             }
 
             .header .menu a {
@@ -246,19 +248,17 @@
         <div class="banners">
             <img src="https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2F840a3ac7-5d81-4ea1-a2cc-f8cc0ce9f5e0___ea09c104bc9495aab6fa5871a4ff9fac.png&w=320&q=75">
             <img src="https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2F13fd96dd-4514-40a3-b4ee-4b9f24dbbe60___f6f21fbe0dd790f4440c989fa7e3c6b9.png&w=320&q=75">
-            <div class="banners2">
-                <img src="https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2Fd94d6573-2453-45e7-b4ff-f21de9b48ffd___abe06629206567d7e334e52fdfee5cac.png&w=320&q=75">
-                <img src="https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2F38f53541-c4d3-4189-adc9-1a9685e735ca___33a9e4aaf8b91479b95eabf5c1fc8874.png&w=320&q=75">
-                <img src="https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2F830a0cbc-024b-4d52-a08d-d8ed57bb0783___ca0ad5dc81f703d01748bd03ab2594a4.png&w=320&q=75">
-            </div>
+            <img src="https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2Fd94d6573-2453-45e7-b4ff-f21de9b48ffd___abe06629206567d7e334e52fdfee5cac.png&w=320&q=75">
+            <img src="https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2F38f53541-c4d3-4189-adc9-1a9685e735ca___33a9e4aaf8b91479b95eabf5c1fc8874.png&w=320&q=75">
+            <img src="https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2F830a0cbc-024b-4d52-a08d-d8ed57bb0783___ca0ad5dc81f703d01748bd03ab2594a4.png&w=320&q=75">
         </div>
 
-        <h2>Páscoa</h2>
+        <h2 class="titles">Páscoa</h2>
         <div class="product-grid">
             <a href="produto/produto.html?id=1" class="product-card">
                 <img src="imgs/3ovos.png" alt="Produto 17">
                 <div class="info">
-                    <span class="sponsored" style="color: #d1002b;">Queima de estoque</span>
+                    <span class="sponsored" style="color: #d1002b;">Ultimas Unidades</span>
                     <h3>3 Ovos de Páscoa Lacta Recheado 355g</h3>
                     <div class="rating">★★★★★</div>
                     <div>
@@ -273,7 +273,7 @@
             <a href="produto/produto.html?id=2" class="product-card">
                 <img src="imgs/2ovos.png" alt="Produto 19">
                 <div class="info">
-                    <span class="sponsored" style="color: #d1002b;">Queima de estoque</span>
+                    <span class="sponsored" style="color: #d1002b;">Ultimas Unidades</span>
                     <h3>2 Ovos de Páscoa Lacta Recheado 355g</h3>
                     <div class="rating">★★★★★</div>
                     <div>
@@ -558,7 +558,7 @@
         </div>
 
 
-        <h2>O que tá fazendo sucesso</h2>
+        <h2 class="titles">O que tá fazendo sucesso</h2>
         <div class="product-grid">
             <!-- Produtos -->
             <a href="produto/produto.html?id=21" class="product-card">
